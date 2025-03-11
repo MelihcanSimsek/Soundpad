@@ -203,6 +203,15 @@ void SoundpadController::add(QString name, QUrl imageUrl, QUrl soundUrl, QString
 
 void SoundpadController::deleteSound(QString id,QUrl imageUrl, QUrl soundUrl)
 {
+    if(m_currentSound != nullptr && m_currentSound->id() == id)
+    {
+
+        m_mediaPlayer.stop();
+        m_audioDecoder->stop();
+        m_mixer->clearBuffer();
+        m_currentSound = nullptr;
+    }
+
     changeDeletingMode();
     dbContext.deleteSound(id);
     QFile::remove(imageUrl.toLocalFile());
