@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/icons/delete.png</file>
+        <file>assets/icons/folder.png</file>
+        <file>assets/icons/exit.png</file>
+        <file>assets/icons/volume.png</file>
+        <file>assets/icons/onmic.png</file>
+        <file>data.json</file>
+        <file>assets/icons/app.ico</file>
+    </qresource>
+</RCC>
